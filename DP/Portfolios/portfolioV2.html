@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <title>Raihan Miah's Portfolio</title>
   <meta name="author" content="Raihan">
+  <link rel="stylesheet" href="mystyle.css">
 </head>
-<link rel="stylesheet" href="mystyle.css">
-<link rel="stylesheet" href="contactPage.css">
 <body>
 
   <nav>
@@ -20,22 +19,27 @@
     </ul>
   </nav>
 
-  <section id="about">
+  <section id="about me">
     <h1>Hello, I'm Raihan Miah</h1>
     <h2>Y13 Student at UTC Sheffield Olympic Legacy Park</h2>
     <h2>Currently Studying T-Level Digital Production, Design and Development</h2>
     <h3>Aspiring Marketing Data Analyst</h3>
-    <p><a><a href="https://www.linkedin.com/in/raihan-miah-a0a53232a/"><img class="profile-img" src="images/LinkedIn_logo_initials.png.webp">Click Me!</a>
+    <p>
+      <a href="https://www.linkedin.com/in/raihan-miah-a0a53232a/">
+        <img class="profile-img" src="images/LinkedIn_logo_initials.png.webp" alt="LinkedIn Logo">
+        Click Me!
+      </a>
+    </p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
-    <p>Python</p>
+    <p>Python, HTML, CSS, Excel</p>
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
-    <p>Portfolio Website</p>
+    <p>Portfolio Website, JavaScript Calculator, Data Dashboard</p>
   </section>
 
   <section id="publications">
@@ -49,8 +53,22 @@
   </section>
 
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: raihanmiah08rm@gmail.com</p>
+    <h2>Contact Me</h2>
+    <form action="mailto:raihanmiah08rm@gmail.com" method="POST" enctype="text/plain">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="subject">Subject:</label>
+      <input type="text" id="subject" name="subject">
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
   </section>
 
 </body>
