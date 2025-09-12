@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8">
   <title>Raihan Miah's Portfolio</title>
   <meta name="author" content="Raihan">
   <link rel="stylesheet" href="mystyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- Navigation -->
   <nav>
     <ul>
+      <li><a href="index.html">Index</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href=contact.html>Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <section id="About Me">
-    <h1>Hello, I'm Raihan Miah</h1>
-    <h2>Y13 Student at UTC Sheffield Olympic Legacy Park</h2>
-    <h2>Currently Studying T-Level Digital Production, Design and Development</h2>
-    <h3>Aspiring Marketing Data Analyst</h3>
-    <p>
-      <a href="https://www.linkedin.com/in/raihan-miah-a0a53232a/">
-        <img class="profile-img" src="images/LinkedIn_logo_initials.png.webp" alt="LinkedIn Logo">
-        Click Me!
-      </a>
-    </p>
+  <!-- Hero / About -->
+  <section id="about" class="hero">
+    <div class="container">
+      <h1>Hello, I'm Raihan Miah</h1>
+      <h2>Y13 Student at UTC Sheffield Olympic Legacy Park</h2>
+      <h2>Currently Studying T-Level Digital Production, Design and Development</h2>
+      <h3>Aspiring Marketing Data Analyst</h3>
+      <p>I'm passionate about technology, data, and creative problem-solving.
+         I want to go into this industry as I believe it combines analytical skills with creativity to help businesses grow.
+      </p>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/raihan-miah-a0a53232a/" target="_blank">
+          <img class="profile-img" src="images/LinkedIn_logo_initials.png.webp" alt="LinkedIn Logo">
+        </a>
+        <a href="https://github.com/Raihan-Miah08" target="_blank">
+          <img src="images/github_picture.png" alt="GitHub Logo" class="github-img">
+        </a>
+      </div>
+    </div>
   </section>
 
+  <!-- Skills -->
   <section id="skills">
-    <h2>Skills</h2>
-    <p>Python, HTML, CSS, Excel</p>
+    <div class="container">
+      <h2>Skills</h2>
+      <p>Python, HTML, CSS, Excel</p>
+    </div>
   </section>
 
+  <!-- Projects -->
   <section id="projects">
-    <h2>Projects</h2>
-    <p>Portfolio Website, JavaScript Calculator, Data Dashboard</p>
+    <div class="container">
+      <h2>Projects</h2>
+      <p>Portfolio Website</p>
+    </div>
   </section>
 
+  <!-- Publications -->
   <section id="publications">
-    <h2>Publications</h2>
-    <p>Coming soon...</p>
+    <div class="container">
+      <h2>Publications</h2>
+      <p>Coming soon...</p>
+    </div>
   </section>
 
+  <!-- Education -->
   <section id="education">
-    <h2>Education</h2>
-    <p>UTC Sheffield Olympic Legacy Park — T-Level Digital Production, Design And Development</p>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <link rel="stylesheet" href="contact.css">
-    <form action="mailto:raihanmiah08rm@gmail.com" method="POST" enctype="text/plain">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject">
-
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
-      <button type="submit">Send</button>
-    </form>
+    <div class="container">
+      <h2>Education</h2>
+      <p>UTC Sheffield Olympic Legacy Park — T-Level Digital Production, Design And Development</p>
+      <p>Currently working at Merit/Distinction Level</p>
+      <p>Mathematics : 6</p>
+      <p>English Language : 5</p>
+      <p>English Literature : 4</p>
+      <p>Biology : 5</p>
+      <p>Chemistry : 4</p>
+      <p>Physics : 4</p>
+      <p>Geography : 4</p>
+      <p>Sociology : 4</p>
+      <p>German : 3</p>
+    </div>
   </section>
 
 </body>
