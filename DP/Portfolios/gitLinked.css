@@ -1,0 +1,14 @@
+.links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.profile-img {
+  width: 45px;
+}
+
+.github-img {
+  width: 70px;
+}

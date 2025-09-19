@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Raihans Dice Roller</title>
+<style>
+    body {
+        font-family: 'Trebuchet MS', sans-serif;
+        text-align: center;
+        background: radial-gradient(circle at center, #222 0%, #000 100%);
+        color: gold;
+        padding-top: 50px;
+    }
+    h1 {
+        font-size: 3em;
+        text-shadow: 0 0 15px red, 0 0 30px orange;
+    }
+    .dice {
+        font-size: 5em;
+        margin: 20px;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    button {
+        padding: 15px 30px;
+        font-size: 1.2em;
+        background: linear-gradient(45deg, gold, orange);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
+        font-weight: bold;
+        box-shadow: 0 5px 15px rgba(255,215,0,0.5);
+    }
+    button:hover {
+        background: linear-gradient(45deg, orange, gold);
+    }
+    #scoreboard {
+        margin-top: 20px;
+        font-size: 1.5em;
+        color: white;
+    }
+    #history {
+        margin-top: 20px;
+        color: lightgray;
+        font-size: 1em;
+        max-height: 150px;
+        overflow-y: auto;
+    }
+</style>
+</head>
+<body>
+
+<h1>🎲 Raihans Bludclart Dice 🎲</h1>
+
+<div id="dice1" class="dice">🎲</div>
+<div id="dice2" class="dice">🎲</div>
+<br>
+<button onclick="rollDice()">ROLL!</button>
+
+<div id="scoreboard">Total Score: 0</div>
+<div id="history"><strong>Roll History:</strong><br></div>
+
+<audio id="rollSound" src="https://www.soundjay.com/misc/sounds/dice-roll-1.mp3"></audio>
+
+<script>
+let totalScore = 0;
+let rollCount = 0;
+
+function rollDice() {
+    let dice1 = document.getElementById("dice1");
+    let dice2 = document.getElementById("dice2");
+    let sound = document.getElementById("rollSound");
+    let history = document.getElementById("history");
+
+    // Play sound
+    sound.currentTime = 0;
+    sound.play();
+
+    // Animation
+    dice1.style.transform = "rotate(360deg)";
+    dice2.style.transform = "rotate(-360deg)";
+
+    setTimeout(() => {
+        dice1.style.transform = "rotate(0deg)";
+        dice2.style.transform = "rotate(0deg)";
+
+        // Random rolls
+        let roll1 = Math.floor(Math.random() * 6) + 1;
+        let roll2 = Math.floor(Math.random() * 6) + 1;
+
+        // Dice Unicode faces
+        const diceFaces = ["⚀","⚁","⚂","⚃","⚄","⚅"];
+        dice1.textContent = diceFaces[roll1 - 1];
+        dice2.textContent = diceFaces[roll2 - 1];
+
+        // Update score
+        let roundScore = roll1 + roll2;
+        totalScore += roundScore;
+        rollCount++;
+
+        document.getElementById("scoreboard").textContent = `Total Score: ${totalScore} (Rolls: ${rollCount})`;
+
+        // Update history
+        history.innerHTML += `Roll ${rollCount}: ${diceFaces[roll1 - 1]} + ${diceFaces[roll2 - 1]} = ${roundScore}<br>`;
+        history.scrollTop = history.scrollHeight;
+    }, 500);
+}
+</script>
+
+</body>
+</html>

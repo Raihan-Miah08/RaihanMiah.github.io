@@ -1,39 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8">
   <title>Contact | Raihan Miah</title>
-  <link rel="stylesheet" href="mystyle.css"> 
+  <link rel="stylesheet" href="styling.css"> 
   <link rel="stylesheet" href="contact.css">
 </head>
 <body>
 
-  <!-- Navigation -->
   <nav>
     <ul>
-      <li><a href="portfolioV2.html">Home</a></li>
+      <li><a href="portfolioV3.html">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#publications">Publications</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href=contact.html>Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Contact Form -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="mailto:raihanmiah08rm@gmail.com" method="POST" enctype="text/plain">
+    <!-- Added name="Form1" and onsubmit -->
+    <form name="Form1" onsubmit="return ValidateForm()" action="mailto:raihanmiah08rm@gmail.com" method="POST" enctype="text/plain">
       <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+      <input type="text" id="name" name="username" required>
 
       <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="text" id="email" name="email" required>
 
       <label for="subject">Subject:</label>
       <input type="text" id="subject" name="subject">
@@ -45,5 +40,7 @@
     </form>
   </section>
 
+  <!-- Link to external JS file -->
+  <script src="ValidateForm.js"></script>
 </body>
 </html>

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="manifest" href="/site.webmanifest">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Raihan Miah | Portfolio</title>
+  <link rel="stylesheet" href="gitLinked.css">
   <link rel="stylesheet" href="styling.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -15,13 +16,13 @@
 
   <nav>
     <ul>
-      <li><a href="#index">Index</a></li>
+      <li><a href="index.html">Index</a></li>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -29,6 +30,14 @@
     <h1>Hello, I'm Raihan Miah</h1>
     <p>Y13 Student at UTC Sheffield Olympic Legacy Park<br>
     Studying T-Level Digital Production, Design and Development</p>
+      <div class="links">
+      <a href="https://www.linkedin.com/in/raihan-miah-a0a53232a/" target="_blank">
+        <img class="profile-img" src="images/LinkedIn_logo_initials.png.webp" alt="LinkedIn Logo">
+      </a>
+      <a href="https://github.com/Raihan-Miah08" target="_blank">
+        <img src="images/github_picture.png" alt="GitHub Logo" class="github-img">
+      </a>
+    </div>
   </section>
 
   <section id="about">
@@ -45,20 +54,20 @@
     </div>
   </section>
 
-  <section class="skills" id="skills">
+  <section id="skills">
     <h2>Skills</h2>
     <div class="container skills-grid">
-      <div class="skills">
+      <div class="skill">
         <h4>HTML & CSS</h4>
         <p>Responsive layouts, modern styling, accessibility</p>
       </div>
-      <div class="skills">
-        <h4>Design</h4>
-        <p>UI/UX principles, clean layouts, branding</p>
+      <div class="skill">
+        <h4></h4>
+        <p>???</p>
       </div>
-      <div class="skills">
-        <h4>Data Analysis</h4>
-        <p>Basic analytics, data visualization, reporting</p>
+      <div class="skill">
+        <h4>???</h4>
+        <p>???</p>
       </div>
     </div>
   </section>
@@ -67,17 +76,18 @@
     <h2>Projects</h2>
     <div class="container projects-grid">
       <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Project 1">
+        <img src="" alt="Project 1">
         <div class="content">
           <h3>Portfolio Website</h3>
           <p>A responsive personal portfolio built with HTML and CSS.</p>
+          <p>You can see all of my portfolios created by clicking Index!</p>
         </div>
       </div>
       <div class="project">
         <img src="https://via.placeholder.com/400x200" alt="Project 2">
         <div class="content">
-          <h3>Data Dashboard</h3>
-          <p>Interactive dashboard concept for marketing analytics.</p>
+          <h3>My Date Calculator</h3>
+          <p><a href="calcForm.html">Click Here!</a></p>
         </div>
       </div>
     </div>
@@ -88,23 +98,17 @@
     <div class="container">
       <ul class="education-list">
         <li><strong>UTC Sheffield Olympic Legacy Park</strong> — T-Level Digital Production, Design and Development</li>
-        <li>GCSEs: Mathematics, English Language, English Literature, Biology, Physics, Chemistry Geography, Sociology, German</li>
+        <li>GCSEs: Mathematics : 6</li>
+        <li>English Language : 5</li>
+        <li>English Literature : 5</li>
+        <li>Biology : 5</li>
+        <li>Physics : 4</li>
+        <li>Chemistry : 4</li>
+        <li>Geography : 4</li>
+        <li>Sociology : 4</li>
+        <li>German : 3</li>
       </ul>
     </div>
   </section>
-
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <div class="container">
-      <form action="mailto:your-email@example.com" method="POST" enctype="text/plain">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send</button>
-      </form>
-    </div>
-  </section>
-
 </body>
 </html>

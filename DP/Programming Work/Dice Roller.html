@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head><title>DICE</title></head>
+<body>
+<h1>Roll The Bludclart DICE</h1>
+
+Dice Roll: <input type="text" id="dice1" value="1">
+<button onclick="rollDice()">Try Roll The Bludclart DICE </button>
+
+<script>
+function rollDice() 
+{
+    var dice1 = Math.floor(Math.random() * 6) + 1;
+    document.getElementById("dice1").value = dice1;
+}
+</script>
+</body>
+</html>
